@@ -360,8 +360,8 @@ fn gen_operation_ids(spec: &mut OpenAPI) -> Result<()> {
 }
 
 fn main() -> Result<()> {
-  let src = "./swagger/v4.json";
-  let dst = "./swagger/generated-opids.json";
+  let src = "./generator/swagger/v4.json";
+  let dst = "./generator/swagger/generated-opids.json";
   let in_file = std::fs::File::open(src)?;
   let out_file = std::fs::File::create_new(dst)?;
   let mut spec = serde_json::from_reader(in_file)?;
